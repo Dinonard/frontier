@@ -8,6 +8,9 @@ jobs:
   benchmarks:
     runs-on: ubuntu-latest
     steps:
+    - name: Install deps
+      run: sudo apt -y install protobuf-compiler
+
     - name: Print version
       run: rustup show
 
