@@ -11,6 +11,15 @@ jobs:
     - name: Install deps
       run: sudo apt -y install protobuf-compiler
 
+    - name: Install latest stable Rust
+      run: rustup install stable
+
+    - name: Set stable as default
+      run: rustup default stable
+
+    - name: Install wasm32-unknown-unknown target
+      run: rustup target add wasm32-unknown-unknown
+
     - name: Print version
       run: rustup show
 
