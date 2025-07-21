@@ -10,4 +10,4 @@ jobs:
     steps:
 
     - name: Install frame-omni bencher tool
-      run: cargo install --path substrate/utils/frame/omni-bencher --profile=production
+      run: cargo install --git https://github.com/paritytech/polkadot-sdk frame-omni-bencher --profile=production --locked
