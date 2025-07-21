@@ -10,4 +10,4 @@ jobs:
     steps:
 
     - name: Install frame-omni bencher tool
-      run: cargo install frame-omni-bencher --profile=production --locked
+      run: cargo install --path substrate/utils/frame/omni-bencher --profile=production
