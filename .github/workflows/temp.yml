@@ -8,6 +8,14 @@ jobs:
   benchmarks:
     runs-on: ubuntu-latest
     steps:
+    - name: Install deps
+      run: sudo apt -y install protobuf-compiler
+
+    - name: Print version
+      run: rustup show
 
     - name: Install frame-omni bencher tool
       run: cargo install --git https://github.com/paritytech/polkadot-sdk frame-omni-bencher --profile=production --locked
+
+    - name: Run benchmark tool
+      run: frame-omni-bencher v1 --help
